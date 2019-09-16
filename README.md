@@ -1,3 +1,3 @@
-# PS1
+# PSG
 
-Prompt String 1 generator
+Prompt String Generator
