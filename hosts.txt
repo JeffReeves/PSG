@@ -1,0 +1,14 @@
+[PRODUCTION]
+alchemy
+
+[TEST-QA]
+otacon
+
+[DEVELOPMENT]
+triforce
+link
+zelda
+ganon
+
+[LAB]
+snake
