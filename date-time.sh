@@ -7,8 +7,8 @@
 # default values
 DEBUG='false'
 LENGTH='long'
-DATETIME='now'
 EMOJI='false'
+DATETIME='now'
 
 # user arguments
 for ARGUMENT in "${@}"; do 
@@ -19,6 +19,10 @@ for ARGUMENT in "${@}"; do
             ;;
         --short|-s)
             LENGTH='short'
+            shift
+            ;;
+        --emoji|-e)
+            EMOJI='true'
             shift
             ;;
         --datetime*|-d*)
@@ -32,10 +36,6 @@ for ARGUMENT in "${@}"; do
             fi
             shift
             ;;
-        --emoji|-e)
-            EMOJI='true'
-            shift
-            ;;
         *)
             echo "[ERROR] Arguments passed to ${0} are invalid."
             exit 250
@@ -47,9 +47,9 @@ done
 if [ "${DEBUG}" == 'true' ]; then
     echo "[DEBUG]"
     echo "LENGTH: ${LENGTH}"
+    echo "EMOJI: ${EMOJI}"
     echo "DATETIME: ${DATETIME}"
     echo "TIMEZONE: ${TIMEZONE}"
-    echo "EMOJI: ${EMOJI}"
     echo ""
 fi
 
